@@ -1,5 +1,5 @@
 import unittest
-from agent import run_gold, QuoteAgent
+from src.agent import run_gold, QuoteAgent, run_tasks
 
 
 class AgentTests(unittest.TestCase):
@@ -12,6 +12,11 @@ class AgentTests(unittest.TestCase):
         a = QuoteAgent()
         a.add_device("fan", 60, 1)
         self.assertEqual(len(a.trace.calls), 1)
+
+    def test_tasks_pass_rate(self):
+        out = run_tasks()
+        self.assertEqual(out["passed"], out["total"])
+        self.assertEqual(out["rate"], 1.0)
 
 
 if __name__ == "__main__":

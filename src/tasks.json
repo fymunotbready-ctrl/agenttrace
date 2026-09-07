@@ -1,0 +1,17 @@
+[
+  {"id": 1, "action": "add_device", "args": {"name": "light", "watts": 10, "hours": 5}, "expected_wh": 50},
+  {"id": 2, "action": "add_device", "args": {"name": "fan", "watts": 60, "hours": 6}, "expected_wh": 360},
+  {"id": 3, "action": "add_device", "args": {"name": "fridge", "watts": 100, "hours": 24}, "expected_wh": 2400},
+  {"id": 4, "action": "add_device", "args": {"name": "phone", "watts": 15, "hours": 3}, "expected_wh": 45},
+  {"id": 5, "action": "add_device", "args": {"name": "tv", "watts": 120, "hours": 4}, "expected_wh": 480},
+  {"id": 6, "action": "add_device", "args": {"name": "router", "watts": 20, "hours": 24}, "expected_wh": 480},
+  {"id": 7, "action": "site_wh", "expected_total": 3815},
+  {"id": 8, "action": "draft_email", "args": {"who": "Asha"}, "expected_in_email": "3815"},
+  {"id": 9, "action": "add_device", "args": {"name": "laptop", "watts": 65, "hours": 8}, "expected_wh": 520},
+  {"id": 10, "action": "site_wh", "expected_total": 4335},
+  {"id": 11, "action": "draft_email", "args": {"who": "Ravi"}, "expected_in_email": "4335"},
+  {"id": 12, "action": "add_device", "args": {"name": "heater", "watts": 1500, "hours": 2}, "expected_wh": 3000},
+  {"id": 13, "action": "site_wh", "expected_total": 7335},
+  {"id": 14, "action": "draft_email", "args": {"who": "Priya"}, "expected_in_email": "7335"},
+  {"id": 15, "action": "trace_count", "expected_count": 17}
+]
